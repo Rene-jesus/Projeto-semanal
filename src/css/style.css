@@ -186,3 +186,43 @@ section.conteudo h2 {
     text-align: center;
 }
 
+@media (max-width: 900px) {
+  .container, .container2, .container3, .container4 {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .grid, .grid2 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .card, .card2 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  header {
+    padding: 2rem 0;
+  }
+  .btn-primary {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .garantia {
+    padding: 1rem;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 600px) {
+  h1, .bonus h1 {
+    font-size: 1.5rem;
+  }
+  h2, .bonus h2 {
+    font-size: 1.2rem;
+  }
+  .card h3, .card2 h3 {
+    font-size: 1rem;
+  }
+}
+
