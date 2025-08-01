@@ -2,12 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+:root {
+  --bg-gradient: linear-gradient(to right, #1f1c2c, #928dab);
+  --text: #333;
+  --primary: #ff5e57;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0,0,0,1);
+}
+
+.dark {
+  --bg: #1f1c2c;
+  --text: #000000;
+  --card-bg: #2a263f;
+  --primary: #ff8b7f;
+  --primary-hover: #ff7366;
+  --header-gradient: linear-gradient(to right, #2f2baf, #6e5fa3);
+  --shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 body {
-    font-family: 'Merriweater', sans-serif;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Merriweather', serif;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
@@ -17,7 +38,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #1f1c2c, #928dab);
+    background: var(--bg-gradient);
     color: #fff;
     padding: 4rem 0;
     text-align: center;
@@ -35,7 +56,7 @@ header p {
 }
 
 .btn-primary {
-    background-color: #ff5e57;
+    background-color: var(--primary);
     color: white;
     padding: 0.75rem 1.5rem;
     margin-top: 32px;
@@ -43,11 +64,20 @@ header p {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
 .btn-primary:hover {
-    background-color: #e14e4a;
+    background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-primary:focus {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
 
 .desc {
@@ -73,11 +103,11 @@ section.benefits h2 {
 }
 
 .card {
-    background-color: #f0f0f0;
+    background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,1);
-    transition: transform 0.3s ease;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition)
 }
 
 .card:hover {
@@ -181,7 +211,7 @@ section.conteudo h2 {
 
 .footer {
     
-    color: 000;
+    color: #000;
     padding: 4rem 0;
     text-align: center;
 }
@@ -225,4 +255,3 @@ section.conteudo h2 {
     font-size: 1rem;
   }
 }
-
